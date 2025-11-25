@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Black Potion Brand Colors - Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+
+    /* Gold Gradient - Primary Brand Color */
+    --primary: 45 100% 51%; /* Bright gold #FFD700 */
+    --primary-foreground: 0 0% 5%;
+    --primary-glow: 51 100% 65%; /* Lighter gold for effects */
+    
+    /* Deep gold for accents */
+    --secondary: 43 74% 49%; /* Deep gold #B8860B */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Sedona earth tones */
+    --muted: 25 20% 85%;
+    --muted-foreground: 0 0% 35%;
+
+    --accent: 15 55% 55%; /* Sedona red rock */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 100% 51%;
+
+    --radius: 0.5rem;
+
+    /* Custom mystical colors */
+    --mystical-dark: 0 0% 8%; /* Deep black for overlays */
+    --mystical-purple: 270 50% 40%; /* Aura/spiritual accent */
+    --wood-warm: 30 35% 45%; /* Natural wood tone */
+    --stone-gray: 0 0% 50%; /* Natural stone */
+    
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(51 100% 65%), hsl(45 100% 51%), hsl(43 74% 49%));
+    --shadow-gold: 0 8px 32px hsla(45, 100%, 51%, 0.3);
+    --glow-gold: 0 0 40px hsla(51, 100%, 65%, 0.4);
+  }
+
+  .dark {
+    /* Black Potion Brand Colors - Dark Mode (Primary mode for brand) */
+    --background: 0 0% 5%; /* Deep black like logo */
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Gold remains vibrant in dark mode */
+    --primary: 45 100% 51%;
+    --primary-foreground: 0 0% 5%;
+    --primary-glow: 51 100% 65%;
+    
+    --secondary: 43 74% 49%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 15 55% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 45 100% 51%;
+
+    --mystical-dark: 0 0% 3%;
+    --mystical-purple: 270 50% 50%;
+    --wood-warm: 30 35% 35%;
+    --stone-gray: 0 0% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
